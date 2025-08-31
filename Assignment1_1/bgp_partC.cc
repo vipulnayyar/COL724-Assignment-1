@@ -4,10 +4,11 @@
 #include "ns3/point-to-point-module.h"
 #include "ns3/applications-module.h"
 #include "ns3/flow-monitor-module.h"
+#include "ns3/ipv4-static-routing-helper.h"
 
 using namespace ns3;
 
-NS_LOG_COMPONENT_DEFINE ("BgpLiteExample");
+NS_LOG_COMPONENT_DEFINE ("BgpPartCExample");
 
 int main (int argc, char *argv[])
 {
@@ -15,11 +16,11 @@ int main (int argc, char *argv[])
   CommandLine cmd;
   cmd.Parse (argc, argv);
 
-  LogComponentEnable ("BgpLiteExample", LOG_LEVEL_INFO);
+  LogComponentEnable ("BgpPartCExample", LOG_LEVEL_INFO);
   LogComponentEnable ("UdpEchoClientApplication", LOG_LEVEL_INFO);
   LogComponentEnable ("UdpEchoServerApplication", LOG_LEVEL_INFO);
 
-  NS_LOG_INFO ("Starting BGP-lite style simulation with 3 routers...");
+  NS_LOG_INFO ("Starting BGP-part-C style simulation with 3 routers...");
 
   NodeContainer routers;
   routers.Create (3);
@@ -53,6 +54,17 @@ int main (int argc, char *argv[])
 
   Ipv4GlobalRoutingHelper::PopulateRoutingTables ();
 
+
+  Ipv4StaticRoutingHelper ipv4RoutingHelper;
+  
+  Ptr<Ipv4StaticRouting> router0_route = ipv4RoutingHelper.GetStaticRouting(routers.Get(0)->GetObject<Ipv4> ());
+
+  router0_route->AddHostRouteTo(Ipv4Address("10.0.2.2"), Ipv4Address("10.0.1.2"), 1);
+
+  Ptr<Ipv4StaticRouting> router2_route = ipv4RoutingHelper.GetStaticRouting(routers.Get(2)->GetObject<Ipv4> ());
+
+  router2_route->AddHostRouteTo(Ipv4Address("10.0.1.1"), Ipv4Address("10.0.2.1"), 1);
+
   uint16_t port = 9;
   UdpEchoServerHelper server (port);
   ApplicationContainer apps = server.Install (routers.Get (2));
@@ -74,7 +86,7 @@ int main (int argc, char *argv[])
   Simulator::Stop (Seconds (11.0));
   Simulator::Run ();
 
-  monitor->SerializeToXmlFile("bgp-partB-results.xml", true, true);
+  monitor->SerializeToXmlFile("bgp-partC-results.xml", true, true);
 
   Simulator::Destroy ();
   return 0;
