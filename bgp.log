@@ -1,0 +1,349 @@
+[INFO ] Starting BGP-lite style simulation with 3 routers...
++0.000000000s -1 Ipv4L3Protocol:Ipv4L3Protocol(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:SetIpForward(0x14570d360, 1)
++0.000000000s -1 Ipv4L3Protocol:SetWeakEsModel(0x14570d360, 1)
++0.000000000s -1 Ipv4L3Protocol:SetStrongEndSystemModel(0x14570d360, 0)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:SetNode(0x14570d360, 0x600000030f00)
++0.000000000s -1 Ipv4L3Protocol:SetupLoopback(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:AddIpv4Interface(0x14570d360, 0x600000030be0)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:Insert(0x14570d360, 0x60000121acb0)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:SetRoutingProtocol(0x14570d360, 0x60000153ee80)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:Insert(0x14570d360, 0x600000334090)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:Insert(0x14570d360, 0x6000000380a0)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x14570d360)
++0.000000000s -1 Ipv4L3Protocol:Ipv4L3Protocol(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:SetIpForward(0x145606110, 1)
++0.000000000s -1 Ipv4L3Protocol:SetWeakEsModel(0x145606110, 1)
++0.000000000s -1 Ipv4L3Protocol:SetStrongEndSystemModel(0x145606110, 0)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:SetNode(0x145606110, 0x6000000305a0)
++0.000000000s -1 Ipv4L3Protocol:SetupLoopback(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:AddIpv4Interface(0x145606110, 0x600000038320)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:Insert(0x145606110, 0x600001232260)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:SetRoutingProtocol(0x145606110, 0x600001530a80)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:Insert(0x145606110, 0x600000334360)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:Insert(0x145606110, 0x600000038500)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606110)
++0.000000000s -1 Ipv4L3Protocol:Ipv4L3Protocol(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:SetIpForward(0x145606490, 1)
++0.000000000s -1 Ipv4L3Protocol:SetWeakEsModel(0x145606490, 1)
++0.000000000s -1 Ipv4L3Protocol:SetStrongEndSystemModel(0x145606490, 0)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:SetNode(0x145606490, 0x600000030280)
++0.000000000s -1 Ipv4L3Protocol:SetupLoopback(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:AddIpv4Interface(0x145606490, 0x600000038640)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:Insert(0x145606490, 0x600001232940)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:SetRoutingProtocol(0x145606490, 0x600001531080)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:Insert(0x145606490, 0x6000003345a0)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:Insert(0x145606490, 0x600000038780)
++0.000000000s -1 Ipv4L3Protocol:NotifyNewAggregate(0x145606490)
++0.000000000s -1 Ipv4L3Protocol:AddInterface(0x14570d360, 0x145606880)
++0.000000000s -1 Ipv4L3Protocol:AddIpv4Interface(0x14570d360, 0x6000000388c0)
++0.000000000s -1 Ipv4L3Protocol:AddAddress(0x14570d360, 1, m_local=10.0.1.1; m_mask=255.255.255.0; m_broadcast=10.0.1.255; m_scope=2; m_secondary=false)
++0.000000000s -1 Ipv4L3Protocol:SetMetric(0x14570d360, 1, 1)
++0.000000000s -1 Ipv4L3Protocol:SetUp(0x14570d360, 1)
++0.000000000s -1 Ipv4L3Protocol:AddInterface(0x145606110, 0x145606a70)
++0.000000000s -1 Ipv4L3Protocol:AddIpv4Interface(0x145606110, 0x600000038960)
++0.000000000s -1 Ipv4L3Protocol:AddAddress(0x145606110, 1, m_local=10.0.1.2; m_mask=255.255.255.0; m_broadcast=10.0.1.255; m_scope=2; m_secondary=false)
++0.000000000s -1 Ipv4L3Protocol:SetMetric(0x145606110, 1, 1)
++0.000000000s -1 Ipv4L3Protocol:SetUp(0x145606110, 1)
++0.000000000s -1 Ipv4L3Protocol:AddInterface(0x145606110, 0x145606c60)
++0.000000000s -1 Ipv4L3Protocol:AddIpv4Interface(0x145606110, 0x600000038a00)
++0.000000000s -1 Ipv4L3Protocol:AddAddress(0x145606110, 2, m_local=10.0.2.1; m_mask=255.255.255.0; m_broadcast=10.0.2.255; m_scope=2; m_secondary=false)
++0.000000000s -1 Ipv4L3Protocol:SetMetric(0x145606110, 2, 1)
++0.000000000s -1 Ipv4L3Protocol:SetUp(0x145606110, 2)
++0.000000000s -1 Ipv4L3Protocol:AddInterface(0x145606490, 0x145606e50)
++0.000000000s -1 Ipv4L3Protocol:AddIpv4Interface(0x145606490, 0x600000038aa0)
++0.000000000s -1 Ipv4L3Protocol:AddAddress(0x145606490, 1, m_local=10.0.2.2; m_mask=255.255.255.0; m_broadcast=10.0.2.255; m_scope=2; m_secondary=false)
++0.000000000s -1 Ipv4L3Protocol:SetMetric(0x145606490, 1, 1)
++0.000000000s -1 Ipv4L3Protocol:SetUp(0x145606490, 1)
++0.000000000s -1 [LOGIC] Forwarding state: true
++0.000000000s -1 [LOGIC] Forwarding state: true
++0.000000000s -1 [LOGIC] Forwarding state: true
++0.000000000s -1 [LOGIC] Forwarding state: true
++2.000000000s 0 Ipv4L3Protocol:Send(0x14570d360, 0x600001a3d5e0, 10.0.1.1, 10.0.2.2, 17, 0x600003f6c360)
++2.000000000s 0 Ipv4L3Protocol:BuildHeader(0x14570d360, 10.0.1.1, 10.0.2.2, 17, 1032, 64, 0, 1)
++2.000000000s 0 [LOGIC] Ipv4L3Protocol::Send case 1b:  passed in with route and valid gateway
++2.000000000s 0 [LOGIC] Testing address 10.0.2.2 with subnet-directed broadcast 127.255.255.255
++2.000000000s 0 [LOGIC] Testing address 10.0.2.2 with subnet-directed broadcast 10.0.1.255
++2.000000000s 0 Ipv4L3Protocol:SendRealOut(0x14570d360, 0x600003f6c360, 0x600001a3d730, 0x16bdfa380)
++2.000000000s 0 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++2.000000000s 0 [LOGIC] Send to gateway 10.0.1.2
++2.000000000s 0 [INFO ] At time +2s client sent 1024 bytes to 10.0.2.2 port 9
++2.002843200s 1 Ipv4L3Protocol:Receive(0x145606110, 0x145606a70, 0x600001a3d7a0, 2048, 02-06-00:00:00:00:00:01, 02-06-00:00:00:00:00:02, 0)
++2.002843200s 1 [LOGIC] Packet from 02-06-00:00:00:00:00:01 received on node 1
++2.002843200s 1 [LOGIC] Forwarding state: true
++2.002843200s 1 [LOGIC] Forwarding state: true
++2.002843200s 1 Ipv4L3Protocol:SourceAddressSelection(0x145606110, 2, " ", 10.0.2.0)
++2.002843200s 1 Ipv4L3Protocol:IpForward(0x145606110, 0x600003f6f2a0, 0x600001a3d570, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 0 protocol 17 offset (bytes) 0 flags [none] length: 1052 10.0.1.1 > 10.0.2.2)
++2.002843200s 1 [LOGIC] Forwarding logic for node: 1
++2.002843200s 1 Ipv4L3Protocol:SendRealOut(0x145606110, 0x600003f6f2a0, 0x600001a3d5e0, 0x16bdf9dc0)
++2.002843200s 1 [LOGIC] Send via NetDevice ifIndex 2 ipv4InterfaceIndex 2
++2.002843200s 1 [LOGIC] Send to destination 10.0.2.2
++2.005686400s 2 Ipv4L3Protocol:Receive(0x145606490, 0x145606e50, 0x600001a3d810, 2048, 02-06-00:00:00:00:00:03, 02-06-00:00:00:00:00:04, 0)
++2.005686400s 2 [LOGIC] Packet from 02-06-00:00:00:00:00:03 received on node 2
++2.005686400s 2 [LOGIC] For me (destination 10.0.2.2 match)
++2.005686400s 2 Ipv4L3Protocol:LocalDeliver(0x145606490, 0x600001a3d7a0, 0x16bdfa210, 1)
++2.005686400s 2 [INFO ] At time +2.00569s server received 1024 bytes from 10.0.1.1 port 49153
++2.005686400s 2 Ipv4L3Protocol:Send(0x145606490, 0x600001a3d960, 10.0.2.2, 10.0.1.1, 17, 0x600003f6f780)
++2.005686400s 2 Ipv4L3Protocol:BuildHeader(0x145606490, 10.0.2.2, 10.0.1.1, 17, 1032, 64, 0, 1)
++2.005686400s 2 [LOGIC] Ipv4L3Protocol::Send case 1b:  passed in with route and valid gateway
++2.005686400s 2 [LOGIC] Testing address 10.0.1.1 with subnet-directed broadcast 127.255.255.255
++2.005686400s 2 [LOGIC] Testing address 10.0.1.1 with subnet-directed broadcast 10.0.2.255
++2.005686400s 2 Ipv4L3Protocol:SendRealOut(0x145606490, 0x600003f6f780, 0x600001a3dab0, 0x16bdf9220)
++2.005686400s 2 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++2.005686400s 2 [LOGIC] Send to gateway 10.0.2.1
++2.005686400s 2 [INFO ] At time +2.00569s server sent 1024 bytes to 10.0.1.1 port 49153
++2.008529600s 1 Ipv4L3Protocol:Receive(0x145606110, 0x145606c60, 0x600001a3db20, 2048, 02-06-00:00:00:00:00:04, 02-06-00:00:00:00:00:03, 0)
++2.008529600s 1 [LOGIC] Packet from 02-06-00:00:00:00:00:04 received on node 1
++2.008529600s 1 [LOGIC] Forwarding state: true
++2.008529600s 1 [LOGIC] Forwarding state: true
++2.008529600s 1 Ipv4L3Protocol:SourceAddressSelection(0x145606110, 1, " ", 10.0.1.0)
++2.008529600s 1 Ipv4L3Protocol:IpForward(0x145606110, 0x600003f6fd50, 0x600001a3d810, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 0 protocol 17 offset (bytes) 0 flags [none] length: 1052 10.0.2.2 > 10.0.1.1)
++2.008529600s 1 [LOGIC] Forwarding logic for node: 1
++2.008529600s 1 Ipv4L3Protocol:SendRealOut(0x145606110, 0x600003f6fd50, 0x600001a3d5e0, 0x16bdf9dc0)
++2.008529600s 1 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++2.008529600s 1 [LOGIC] Send to destination 10.0.1.1
++2.011372800s 0 Ipv4L3Protocol:Receive(0x14570d360, 0x145606880, 0x600001a3d730, 2048, 02-06-00:00:00:00:00:02, 02-06-00:00:00:00:00:01, 0)
++2.011372800s 0 [LOGIC] Packet from 02-06-00:00:00:00:00:02 received on node 0
++2.011372800s 0 [LOGIC] For me (destination 10.0.1.1 match)
++2.011372800s 0 Ipv4L3Protocol:LocalDeliver(0x14570d360, 0x600001a3db20, 0x16bdfa210, 1)
++2.011372800s 0 [INFO ] At time +2.01137s client received 1024 bytes from 10.0.2.2 port 9
++3.000000000s 0 Ipv4L3Protocol:Send(0x14570d360, 0x600001a3d5e0, 10.0.1.1, 10.0.2.2, 17, 0x600003f6b330)
++3.000000000s 0 Ipv4L3Protocol:BuildHeader(0x14570d360, 10.0.1.1, 10.0.2.2, 17, 1032, 64, 0, 1)
++3.000000000s 0 [LOGIC] Ipv4L3Protocol::Send case 1b:  passed in with route and valid gateway
++3.000000000s 0 [LOGIC] Testing address 10.0.2.2 with subnet-directed broadcast 127.255.255.255
++3.000000000s 0 [LOGIC] Testing address 10.0.2.2 with subnet-directed broadcast 10.0.1.255
++3.000000000s 0 Ipv4L3Protocol:SendRealOut(0x14570d360, 0x600003f6b330, 0x600001a3dab0, 0x16bdfa380)
++3.000000000s 0 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++3.000000000s 0 [LOGIC] Send to gateway 10.0.1.2
++3.000000000s 0 [INFO ] At time +3s client sent 1024 bytes to 10.0.2.2 port 9
++3.002843200s 1 Ipv4L3Protocol:Receive(0x145606110, 0x145606a70, 0x600001a3d880, 2048, 02-06-00:00:00:00:00:01, 02-06-00:00:00:00:00:02, 0)
++3.002843200s 1 [LOGIC] Packet from 02-06-00:00:00:00:00:01 received on node 1
++3.002843200s 1 [LOGIC] Forwarding state: true
++3.002843200s 1 [LOGIC] Forwarding state: true
++3.002843200s 1 Ipv4L3Protocol:SourceAddressSelection(0x145606110, 2, " ", 10.0.2.0)
++3.002843200s 1 Ipv4L3Protocol:IpForward(0x145606110, 0x600003f6b2a0, 0x600001a3d730, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 1 protocol 17 offset (bytes) 0 flags [none] length: 1052 10.0.1.1 > 10.0.2.2)
++3.002843200s 1 [LOGIC] Forwarding logic for node: 1
++3.002843200s 1 Ipv4L3Protocol:SendRealOut(0x145606110, 0x600003f6b2a0, 0x600001a3d5e0, 0x16bdf9dc0)
++3.002843200s 1 [LOGIC] Send via NetDevice ifIndex 2 ipv4InterfaceIndex 2
++3.002843200s 1 [LOGIC] Send to destination 10.0.2.2
++3.005686400s 2 Ipv4L3Protocol:Receive(0x145606490, 0x145606e50, 0x600001a3db20, 2048, 02-06-00:00:00:00:00:03, 02-06-00:00:00:00:00:04, 0)
++3.005686400s 2 [LOGIC] Packet from 02-06-00:00:00:00:00:03 received on node 2
++3.005686400s 2 [LOGIC] For me (destination 10.0.2.2 match)
++3.005686400s 2 Ipv4L3Protocol:LocalDeliver(0x145606490, 0x600001a3d880, 0x16bdfa210, 1)
++3.005686400s 2 [INFO ] At time +3.00569s server received 1024 bytes from 10.0.1.1 port 49153
++3.005686400s 2 Ipv4L3Protocol:Send(0x145606490, 0x600001a3d960, 10.0.2.2, 10.0.1.1, 17, 0x600003f6b000)
++3.005686400s 2 Ipv4L3Protocol:BuildHeader(0x145606490, 10.0.2.2, 10.0.1.1, 17, 1032, 64, 0, 1)
++3.005686400s 2 [LOGIC] Ipv4L3Protocol::Send case 1b:  passed in with route and valid gateway
++3.005686400s 2 [LOGIC] Testing address 10.0.1.1 with subnet-directed broadcast 127.255.255.255
++3.005686400s 2 [LOGIC] Testing address 10.0.1.1 with subnet-directed broadcast 10.0.2.255
++3.005686400s 2 Ipv4L3Protocol:SendRealOut(0x145606490, 0x600003f6b000, 0x600001a3db90, 0x16bdf9220)
++3.005686400s 2 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++3.005686400s 2 [LOGIC] Send to gateway 10.0.2.1
++3.005686400s 2 [INFO ] At time +3.00569s server sent 1024 bytes to 10.0.1.1 port 49153
++3.008529600s 1 Ipv4L3Protocol:Receive(0x145606110, 0x145606c60, 0x600001a3dc00, 2048, 02-06-00:00:00:00:00:04, 02-06-00:00:00:00:00:03, 0)
++3.008529600s 1 [LOGIC] Packet from 02-06-00:00:00:00:00:04 received on node 1
++3.008529600s 1 [LOGIC] Forwarding state: true
++3.008529600s 1 [LOGIC] Forwarding state: true
++3.008529600s 1 Ipv4L3Protocol:SourceAddressSelection(0x145606110, 1, " ", 10.0.1.0)
++3.008529600s 1 Ipv4L3Protocol:IpForward(0x145606110, 0x600003f6aeb0, 0x600001a3db20, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 1 protocol 17 offset (bytes) 0 flags [none] length: 1052 10.0.2.2 > 10.0.1.1)
++3.008529600s 1 [LOGIC] Forwarding logic for node: 1
++3.008529600s 1 Ipv4L3Protocol:SendRealOut(0x145606110, 0x600003f6aeb0, 0x600001a3d5e0, 0x16bdf9dc0)
++3.008529600s 1 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++3.008529600s 1 [LOGIC] Send to destination 10.0.1.1
++3.011372800s 0 Ipv4L3Protocol:Receive(0x14570d360, 0x145606880, 0x600001a3d880, 2048, 02-06-00:00:00:00:00:02, 02-06-00:00:00:00:00:01, 0)
++3.011372800s 0 [LOGIC] Packet from 02-06-00:00:00:00:00:02 received on node 0
++3.011372800s 0 [LOGIC] For me (destination 10.0.1.1 match)
++3.011372800s 0 Ipv4L3Protocol:LocalDeliver(0x14570d360, 0x600001a3dc00, 0x16bdfa210, 1)
++3.011372800s 0 [INFO ] At time +3.01137s client received 1024 bytes from 10.0.2.2 port 9
++4.000000000s 0 Ipv4L3Protocol:Send(0x14570d360, 0x600001a3d5e0, 10.0.1.1, 10.0.2.2, 17, 0x600003f6b360)
++4.000000000s 0 Ipv4L3Protocol:BuildHeader(0x14570d360, 10.0.1.1, 10.0.2.2, 17, 1032, 64, 0, 1)
++4.000000000s 0 [LOGIC] Ipv4L3Protocol::Send case 1b:  passed in with route and valid gateway
++4.000000000s 0 [LOGIC] Testing address 10.0.2.2 with subnet-directed broadcast 127.255.255.255
++4.000000000s 0 [LOGIC] Testing address 10.0.2.2 with subnet-directed broadcast 10.0.1.255
++4.000000000s 0 Ipv4L3Protocol:SendRealOut(0x14570d360, 0x600003f6b360, 0x600001a3db90, 0x16bdfa380)
++4.000000000s 0 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++4.000000000s 0 [LOGIC] Send to gateway 10.0.1.2
++4.000000000s 0 [INFO ] At time +4s client sent 1024 bytes to 10.0.2.2 port 9
++4.002843200s 1 Ipv4L3Protocol:Receive(0x145606110, 0x145606a70, 0x600001a3db20, 2048, 02-06-00:00:00:00:00:01, 02-06-00:00:00:00:00:02, 0)
++4.002843200s 1 [LOGIC] Packet from 02-06-00:00:00:00:00:01 received on node 1
++4.002843200s 1 [LOGIC] Forwarding state: true
++4.002843200s 1 [LOGIC] Forwarding state: true
++4.002843200s 1 Ipv4L3Protocol:SourceAddressSelection(0x145606110, 2, " ", 10.0.2.0)
++4.002843200s 1 Ipv4L3Protocol:IpForward(0x145606110, 0x600003f6abe0, 0x600001a3d880, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 2 protocol 17 offset (bytes) 0 flags [none] length: 1052 10.0.1.1 > 10.0.2.2)
++4.002843200s 1 [LOGIC] Forwarding logic for node: 1
++4.002843200s 1 Ipv4L3Protocol:SendRealOut(0x145606110, 0x600003f6abe0, 0x600001a3d5e0, 0x16bdf9dc0)
++4.002843200s 1 [LOGIC] Send via NetDevice ifIndex 2 ipv4InterfaceIndex 2
++4.002843200s 1 [LOGIC] Send to destination 10.0.2.2
++4.005686400s 2 Ipv4L3Protocol:Receive(0x145606490, 0x145606e50, 0x600001a3dc00, 2048, 02-06-00:00:00:00:00:03, 02-06-00:00:00:00:00:04, 0)
++4.005686400s 2 [LOGIC] Packet from 02-06-00:00:00:00:00:03 received on node 2
++4.005686400s 2 [LOGIC] For me (destination 10.0.2.2 match)
++4.005686400s 2 Ipv4L3Protocol:LocalDeliver(0x145606490, 0x600001a3db20, 0x16bdfa210, 1)
++4.005686400s 2 [INFO ] At time +4.00569s server received 1024 bytes from 10.0.1.1 port 49153
++4.005686400s 2 Ipv4L3Protocol:Send(0x145606490, 0x600001a3d730, 10.0.2.2, 10.0.1.1, 17, 0x600003f6b330)
++4.005686400s 2 Ipv4L3Protocol:BuildHeader(0x145606490, 10.0.2.2, 10.0.1.1, 17, 1032, 64, 0, 1)
++4.005686400s 2 [LOGIC] Ipv4L3Protocol::Send case 1b:  passed in with route and valid gateway
++4.005686400s 2 [LOGIC] Testing address 10.0.1.1 with subnet-directed broadcast 127.255.255.255
++4.005686400s 2 [LOGIC] Testing address 10.0.1.1 with subnet-directed broadcast 10.0.2.255
++4.005686400s 2 Ipv4L3Protocol:SendRealOut(0x145606490, 0x600003f6b330, 0x600001a3d960, 0x16bdf9220)
++4.005686400s 2 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++4.005686400s 2 [LOGIC] Send to gateway 10.0.2.1
++4.005686400s 2 [INFO ] At time +4.00569s server sent 1024 bytes to 10.0.1.1 port 49153
++4.008529600s 1 Ipv4L3Protocol:Receive(0x145606110, 0x145606c60, 0x600001a3d9d0, 2048, 02-06-00:00:00:00:00:04, 02-06-00:00:00:00:00:03, 0)
++4.008529600s 1 [LOGIC] Packet from 02-06-00:00:00:00:00:04 received on node 1
++4.008529600s 1 [LOGIC] Forwarding state: true
++4.008529600s 1 [LOGIC] Forwarding state: true
++4.008529600s 1 Ipv4L3Protocol:SourceAddressSelection(0x145606110, 1, " ", 10.0.1.0)
++4.008529600s 1 Ipv4L3Protocol:IpForward(0x145606110, 0x600003f6b750, 0x600001a3dc00, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 2 protocol 17 offset (bytes) 0 flags [none] length: 1052 10.0.2.2 > 10.0.1.1)
++4.008529600s 1 [LOGIC] Forwarding logic for node: 1
++4.008529600s 1 Ipv4L3Protocol:SendRealOut(0x145606110, 0x600003f6b750, 0x600001a3d5e0, 0x16bdf9dc0)
++4.008529600s 1 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++4.008529600s 1 [LOGIC] Send to destination 10.0.1.1
++4.011372800s 0 Ipv4L3Protocol:Receive(0x14570d360, 0x145606880, 0x600001a3db20, 2048, 02-06-00:00:00:00:00:02, 02-06-00:00:00:00:00:01, 0)
++4.011372800s 0 [LOGIC] Packet from 02-06-00:00:00:00:00:02 received on node 0
++4.011372800s 0 [LOGIC] For me (destination 10.0.1.1 match)
++4.011372800s 0 Ipv4L3Protocol:LocalDeliver(0x14570d360, 0x600001a3d9d0, 0x16bdfa210, 1)
++4.011372800s 0 [INFO ] At time +4.01137s client received 1024 bytes from 10.0.2.2 port 9
++5.000000000s 0 Ipv4L3Protocol:Send(0x14570d360, 0x600001a3d5e0, 10.0.1.1, 10.0.2.2, 17, 0x600003f6ad90)
++5.000000000s 0 Ipv4L3Protocol:BuildHeader(0x14570d360, 10.0.1.1, 10.0.2.2, 17, 1032, 64, 0, 1)
++5.000000000s 0 [LOGIC] Ipv4L3Protocol::Send case 1b:  passed in with route and valid gateway
++5.000000000s 0 [LOGIC] Testing address 10.0.2.2 with subnet-directed broadcast 127.255.255.255
++5.000000000s 0 [LOGIC] Testing address 10.0.2.2 with subnet-directed broadcast 10.0.1.255
++5.000000000s 0 Ipv4L3Protocol:SendRealOut(0x14570d360, 0x600003f6ad90, 0x600001a3d960, 0x16bdfa380)
++5.000000000s 0 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++5.000000000s 0 [LOGIC] Send to gateway 10.0.1.2
++5.000000000s 0 [INFO ] At time +5s client sent 1024 bytes to 10.0.2.2 port 9
++5.002843200s 1 Ipv4L3Protocol:Receive(0x145606110, 0x145606a70, 0x600001a3dc00, 2048, 02-06-00:00:00:00:00:01, 02-06-00:00:00:00:00:02, 0)
++5.002843200s 1 [LOGIC] Packet from 02-06-00:00:00:00:00:01 received on node 1
++5.002843200s 1 [LOGIC] Forwarding state: true
++5.002843200s 1 [LOGIC] Forwarding state: true
++5.002843200s 1 Ipv4L3Protocol:SourceAddressSelection(0x145606110, 2, " ", 10.0.2.0)
++5.002843200s 1 Ipv4L3Protocol:IpForward(0x145606110, 0x600003f6b2a0, 0x600001a3db20, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 3 protocol 17 offset (bytes) 0 flags [none] length: 1052 10.0.1.1 > 10.0.2.2)
++5.002843200s 1 [LOGIC] Forwarding logic for node: 1
++5.002843200s 1 Ipv4L3Protocol:SendRealOut(0x145606110, 0x600003f6b2a0, 0x600001a3d5e0, 0x16bdf9dc0)
++5.002843200s 1 [LOGIC] Send via NetDevice ifIndex 2 ipv4InterfaceIndex 2
++5.002843200s 1 [LOGIC] Send to destination 10.0.2.2
++5.005686400s 2 Ipv4L3Protocol:Receive(0x145606490, 0x145606e50, 0x600001a3d9d0, 2048, 02-06-00:00:00:00:00:03, 02-06-00:00:00:00:00:04, 0)
++5.005686400s 2 [LOGIC] Packet from 02-06-00:00:00:00:00:03 received on node 2
++5.005686400s 2 [LOGIC] For me (destination 10.0.2.2 match)
++5.005686400s 2 Ipv4L3Protocol:LocalDeliver(0x145606490, 0x600001a3dc00, 0x16bdfa210, 1)
++5.005686400s 2 [INFO ] At time +5.00569s server received 1024 bytes from 10.0.1.1 port 49153
++5.005686400s 2 Ipv4L3Protocol:Send(0x145606490, 0x600001a3d880, 10.0.2.2, 10.0.1.1, 17, 0x600003f6b360)
++5.005686400s 2 Ipv4L3Protocol:BuildHeader(0x145606490, 10.0.2.2, 10.0.1.1, 17, 1032, 64, 0, 1)
++5.005686400s 2 [LOGIC] Ipv4L3Protocol::Send case 1b:  passed in with route and valid gateway
++5.005686400s 2 [LOGIC] Testing address 10.0.1.1 with subnet-directed broadcast 127.255.255.255
++5.005686400s 2 [LOGIC] Testing address 10.0.1.1 with subnet-directed broadcast 10.0.2.255
++5.005686400s 2 Ipv4L3Protocol:SendRealOut(0x145606490, 0x600003f6b360, 0x600001a3d730, 0x16bdf9220)
++5.005686400s 2 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++5.005686400s 2 [LOGIC] Send to gateway 10.0.2.1
++5.005686400s 2 [INFO ] At time +5.00569s server sent 1024 bytes to 10.0.1.1 port 49153
++5.008529600s 1 Ipv4L3Protocol:Receive(0x145606110, 0x145606c60, 0x600001a3d8f0, 2048, 02-06-00:00:00:00:00:04, 02-06-00:00:00:00:00:03, 0)
++5.008529600s 1 [LOGIC] Packet from 02-06-00:00:00:00:00:04 received on node 1
++5.008529600s 1 [LOGIC] Forwarding state: true
++5.008529600s 1 [LOGIC] Forwarding state: true
++5.008529600s 1 Ipv4L3Protocol:SourceAddressSelection(0x145606110, 1, " ", 10.0.1.0)
++5.008529600s 1 Ipv4L3Protocol:IpForward(0x145606110, 0x600003f6b000, 0x600001a3d9d0, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 3 protocol 17 offset (bytes) 0 flags [none] length: 1052 10.0.2.2 > 10.0.1.1)
++5.008529600s 1 [LOGIC] Forwarding logic for node: 1
++5.008529600s 1 Ipv4L3Protocol:SendRealOut(0x145606110, 0x600003f6b000, 0x600001a3d5e0, 0x16bdf9dc0)
++5.008529600s 1 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++5.008529600s 1 [LOGIC] Send to destination 10.0.1.1
++5.011372800s 0 Ipv4L3Protocol:Receive(0x14570d360, 0x145606880, 0x600001a3dc00, 2048, 02-06-00:00:00:00:00:02, 02-06-00:00:00:00:00:01, 0)
++5.011372800s 0 [LOGIC] Packet from 02-06-00:00:00:00:00:02 received on node 0
++5.011372800s 0 [LOGIC] For me (destination 10.0.1.1 match)
++5.011372800s 0 Ipv4L3Protocol:LocalDeliver(0x14570d360, 0x600001a3d8f0, 0x16bdfa210, 1)
++5.011372800s 0 [INFO ] At time +5.01137s client received 1024 bytes from 10.0.2.2 port 9
++6.000000000s 0 Ipv4L3Protocol:Send(0x14570d360, 0x600001a3d5e0, 10.0.1.1, 10.0.2.2, 17, 0x600003f6aeb0)
++6.000000000s 0 Ipv4L3Protocol:BuildHeader(0x14570d360, 10.0.1.1, 10.0.2.2, 17, 1032, 64, 0, 1)
++6.000000000s 0 [LOGIC] Ipv4L3Protocol::Send case 1b:  passed in with route and valid gateway
++6.000000000s 0 [LOGIC] Testing address 10.0.2.2 with subnet-directed broadcast 127.255.255.255
++6.000000000s 0 [LOGIC] Testing address 10.0.2.2 with subnet-directed broadcast 10.0.1.255
++6.000000000s 0 Ipv4L3Protocol:SendRealOut(0x14570d360, 0x600003f6aeb0, 0x600001a3d730, 0x16bdfa380)
++6.000000000s 0 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++6.000000000s 0 [LOGIC] Send to gateway 10.0.1.2
++6.000000000s 0 [INFO ] At time +6s client sent 1024 bytes to 10.0.2.2 port 9
++6.002843200s 1 Ipv4L3Protocol:Receive(0x145606110, 0x145606a70, 0x600001a3d9d0, 2048, 02-06-00:00:00:00:00:01, 02-06-00:00:00:00:00:02, 0)
++6.002843200s 1 [LOGIC] Packet from 02-06-00:00:00:00:00:01 received on node 1
++6.002843200s 1 [LOGIC] Forwarding state: true
++6.002843200s 1 [LOGIC] Forwarding state: true
++6.002843200s 1 Ipv4L3Protocol:SourceAddressSelection(0x145606110, 2, " ", 10.0.2.0)
++6.002843200s 1 Ipv4L3Protocol:IpForward(0x145606110, 0x600003f6abe0, 0x600001a3dc00, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 4 protocol 17 offset (bytes) 0 flags [none] length: 1052 10.0.1.1 > 10.0.2.2)
++6.002843200s 1 [LOGIC] Forwarding logic for node: 1
++6.002843200s 1 Ipv4L3Protocol:SendRealOut(0x145606110, 0x600003f6abe0, 0x600001a3d5e0, 0x16bdf9dc0)
++6.002843200s 1 [LOGIC] Send via NetDevice ifIndex 2 ipv4InterfaceIndex 2
++6.002843200s 1 [LOGIC] Send to destination 10.0.2.2
++6.005686400s 2 Ipv4L3Protocol:Receive(0x145606490, 0x145606e50, 0x600001a3d8f0, 2048, 02-06-00:00:00:00:00:03, 02-06-00:00:00:00:00:04, 0)
++6.005686400s 2 [LOGIC] Packet from 02-06-00:00:00:00:00:03 received on node 2
++6.005686400s 2 [LOGIC] For me (destination 10.0.2.2 match)
++6.005686400s 2 Ipv4L3Protocol:LocalDeliver(0x145606490, 0x600001a3d9d0, 0x16bdfa210, 1)
++6.005686400s 2 [INFO ] At time +6.00569s server received 1024 bytes from 10.0.1.1 port 49153
++6.005686400s 2 Ipv4L3Protocol:Send(0x145606490, 0x600001a3db20, 10.0.2.2, 10.0.1.1, 17, 0x600003f6aeb0)
++6.005686400s 2 Ipv4L3Protocol:BuildHeader(0x145606490, 10.0.2.2, 10.0.1.1, 17, 1032, 64, 0, 1)
++6.005686400s 2 [LOGIC] Ipv4L3Protocol::Send case 1b:  passed in with route and valid gateway
++6.005686400s 2 [LOGIC] Testing address 10.0.1.1 with subnet-directed broadcast 127.255.255.255
++6.005686400s 2 [LOGIC] Testing address 10.0.1.1 with subnet-directed broadcast 10.0.2.255
++6.005686400s 2 Ipv4L3Protocol:SendRealOut(0x145606490, 0x600003f6aeb0, 0x600001a3d880, 0x16bdf9220)
++6.005686400s 2 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++6.005686400s 2 [LOGIC] Send to gateway 10.0.2.1
++6.005686400s 2 [INFO ] At time +6.00569s server sent 1024 bytes to 10.0.1.1 port 49153
++6.008529600s 1 Ipv4L3Protocol:Receive(0x145606110, 0x145606c60, 0x600001a3dab0, 2048, 02-06-00:00:00:00:00:04, 02-06-00:00:00:00:00:03, 0)
++6.008529600s 1 [LOGIC] Packet from 02-06-00:00:00:00:00:04 received on node 1
++6.008529600s 1 [LOGIC] Forwarding state: true
++6.008529600s 1 [LOGIC] Forwarding state: true
++6.008529600s 1 Ipv4L3Protocol:SourceAddressSelection(0x145606110, 1, " ", 10.0.1.0)
++6.008529600s 1 Ipv4L3Protocol:IpForward(0x145606110, 0x600003f6b330, 0x600001a3d8f0, tos 0x0 DSCP Default ECN Not-ECT ttl 64 id 4 protocol 17 offset (bytes) 0 flags [none] length: 1052 10.0.2.2 > 10.0.1.1)
++6.008529600s 1 [LOGIC] Forwarding logic for node: 1
++6.008529600s 1 Ipv4L3Protocol:SendRealOut(0x145606110, 0x600003f6b330, 0x600001a3d5e0, 0x16bdf9dc0)
++6.008529600s 1 [LOGIC] Send via NetDevice ifIndex 1 ipv4InterfaceIndex 1
++6.008529600s 1 [LOGIC] Send to destination 10.0.1.1
++6.011372800s 0 Ipv4L3Protocol:Receive(0x14570d360, 0x145606880, 0x600001a3d9d0, 2048, 02-06-00:00:00:00:00:02, 02-06-00:00:00:00:00:01, 0)
++6.011372800s 0 [LOGIC] Packet from 02-06-00:00:00:00:00:02 received on node 0
++6.011372800s 0 [LOGIC] For me (destination 10.0.1.1 match)
++6.011372800s 0 Ipv4L3Protocol:LocalDeliver(0x14570d360, 0x600001a3dab0, 0x16bdfa210, 1)
++6.011372800s 0 [INFO ] At time +6.01137s client received 1024 bytes from 10.0.2.2 port 9
+Ipv4L3Protocol:DoDispose(0x14570d360)
+Ipv4L3Protocol:DoDispose(0x145606110)
+Ipv4L3Protocol:DoDispose(0x145606490)
+Ipv4L3Protocol:~Ipv4L3Protocol(0x145606490)
+Ipv4L3Protocol:~Ipv4L3Protocol(0x145606110)
+Ipv4L3Protocol:~Ipv4L3Protocol(0x14570d360)
