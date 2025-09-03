@@ -11,6 +11,6 @@ $ ./ns3 build
 
 
 ```
-$NS_LOG="*=prefix_time|prefix_node|prefix_level:Ipv4L3Protocol=level_logic|prefix_time|prefix_node|prefix_level" ./ns3.45-bgp-default
+$ NS_LOG="*=prefix_time|prefix_node|prefix_level:Ipv4L3Protocol=level_logic|prefix_time|prefix_node|prefix_level" ./ns3.45-bgp-default
 ```
 
