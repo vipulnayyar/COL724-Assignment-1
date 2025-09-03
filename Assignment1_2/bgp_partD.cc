@@ -79,7 +79,7 @@ int main (int argc, char *argv[])
 
   apps = client.Install (routers.Get (0));
   apps.Start (Seconds (2.0));
-  apps.Stop (Seconds (15.0));
+  apps.Stop (Seconds (10.0));
 
   Ptr<Ipv4> ipv4B = routers.Get(0)->GetObject<Ipv4>();
   int32_t ifIndexB = ipv4B->GetInterfaceForDevice(d13.Get(0));
@@ -93,7 +93,7 @@ int main (int argc, char *argv[])
   FlowMonitorHelper flowmon;
   Ptr<FlowMonitor> monitor = flowmon.InstallAll ();
 
-  Simulator::Stop (Seconds (25.0));
+  Simulator::Stop (Seconds (11.0));
   Simulator::Run ();
 
   monitor->SerializeToXmlFile("bgp-partD-results.xml", true, true);

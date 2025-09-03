@@ -8,7 +8,7 @@
 
 using namespace ns3;
 
-NS_LOG_COMPONENT_DEFINE ("BgpPartDExample");
+NS_LOG_COMPONENT_DEFINE ("BgpPartEExample");
 
 
 void StopLink(Ptr<Node> router1, int32_t interface_index ){
@@ -31,7 +31,7 @@ int main (int argc, char *argv[])
   CommandLine cmd;
   cmd.Parse (argc, argv);
 
-  LogComponentEnable ("BgpPartDExample", LOG_LEVEL_INFO);
+  LogComponentEnable ("BgpPartEExample", LOG_LEVEL_INFO);
   LogComponentEnable ("UdpEchoClientApplication", LOG_LEVEL_INFO);
   LogComponentEnable ("UdpEchoServerApplication", LOG_LEVEL_INFO);
 
@@ -50,7 +50,9 @@ int main (int argc, char *argv[])
 
   NetDeviceContainer d12 = p2p.Install (routers.Get (0), routers.Get (1));
   NetDeviceContainer d23 = p2p.Install (routers.Get (1), routers.Get (2));
-  NetDeviceContainer d13 = p2p.Install (routers.Get (0), routers.Get (2));
+
+  NetDeviceContainer d14 = p2p.Install (routers.Get (0), routers.Get (3));
+  NetDeviceContainer d43 = p2p.Install (routers.Get (3), routers.Get (2));
 
 
   Ipv4AddressHelper ipv4;
@@ -61,7 +63,10 @@ int main (int argc, char *argv[])
   Ipv4InterfaceContainer i23 = ipv4.Assign (d23);
 
   ipv4.SetBase ("10.0.3.0", "255.255.255.0");
-  Ipv4InterfaceContainer i13 = ipv4.Assign (d13);
+  Ipv4InterfaceContainer i14 = ipv4.Assign (d14);
+
+  ipv4.SetBase ("10.0.4.0", "255.255.255.0");
+  Ipv4InterfaceContainer i43 = ipv4.Assign (d43);
 
   Ipv4GlobalRoutingHelper::PopulateRoutingTables ();
 
@@ -79,13 +84,13 @@ int main (int argc, char *argv[])
 
   apps = client.Install (routers.Get (0));
   apps.Start (Seconds (2.0));
-  apps.Stop (Seconds (15.0));
+  apps.Stop (Seconds (10.0));
 
-  Ptr<Ipv4> ipv4B = routers.Get(0)->GetObject<Ipv4>();
-  int32_t ifIndexB = ipv4B->GetInterfaceForDevice(d13.Get(0));
+  Ptr<Ipv4> ipv4B = routers.Get(1)->GetObject<Ipv4>();
+  int32_t ifIndexB = ipv4B->GetInterfaceForDevice(d23.Get(0));
 
 
-  Simulator::Schedule(Seconds(5.0), &StopLink, routers.Get (0), ifIndexB );
+  Simulator::Schedule(Seconds(5.0), &StopLink, routers.Get (1), ifIndexB );
 
   Simulator::Schedule(Seconds(7.0), &StartLink, routers.Get (0), ifIndexB );
 
@@ -93,10 +98,10 @@ int main (int argc, char *argv[])
   FlowMonitorHelper flowmon;
   Ptr<FlowMonitor> monitor = flowmon.InstallAll ();
 
-  Simulator::Stop (Seconds (25.0));
+  Simulator::Stop (Seconds (11.0));
   Simulator::Run ();
 
-  monitor->SerializeToXmlFile("bgp-partD-results.xml", true, true);
+  monitor->SerializeToXmlFile("bgp-partE-results.xml", true, true);
 
   Simulator::Destroy ();
   return 0;
