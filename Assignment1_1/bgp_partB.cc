@@ -31,14 +31,14 @@ int main (int argc, char *argv[])
   p2p.SetDeviceAttribute ("DataRate", StringValue ("10Mbps"));
   p2p.SetChannelAttribute ("Delay", StringValue ("2ms"));
 
-  PointToPointHelper p2p_new;
-  p2p.SetDeviceAttribute ("DataRate", StringValue ("20Mbps"));
-  p2p.SetChannelAttribute ("Delay", StringValue ("1ms"));
+  PointToPointHelper p2p_faster;
+  p2p_faster.SetDeviceAttribute ("DataRate", StringValue ("20Mbps"));
+  p2p_faster.SetChannelAttribute ("Delay", StringValue ("1ms"));
 
 
   NetDeviceContainer d12 = p2p.Install (routers.Get (0), routers.Get (1));
   NetDeviceContainer d23 = p2p.Install (routers.Get (1), routers.Get (2));
-  NetDeviceContainer d13 = p2p.Install (routers.Get (0), routers.Get (2));
+  NetDeviceContainer d13 = p2p_faster.Install (routers.Get (0), routers.Get (2));
 
 
   Ipv4AddressHelper ipv4;

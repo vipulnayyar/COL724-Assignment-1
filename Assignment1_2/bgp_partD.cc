@@ -47,10 +47,6 @@ int main (int argc, char *argv[])
   p2p.SetDeviceAttribute ("DataRate", StringValue ("10Mbps"));
   p2p.SetChannelAttribute ("Delay", StringValue ("2ms"));
 
-  PointToPointHelper p2p_new;
-  p2p.SetDeviceAttribute ("DataRate", StringValue ("20Mbps"));
-  p2p.SetChannelAttribute ("Delay", StringValue ("1ms"));
-
 
   NetDeviceContainer d12 = p2p.Install (routers.Get (0), routers.Get (1));
   NetDeviceContainer d23 = p2p.Install (routers.Get (1), routers.Get (2));
@@ -69,13 +65,7 @@ int main (int argc, char *argv[])
 
   Ipv4GlobalRoutingHelper::PopulateRoutingTables ();
 
-/* 
-  Ipv4StaticRoutingHelper ipv4RoutingHelper;
-  Ptr<Ipv4StaticRouting> router0_route = ipv4RoutingHelper.GetStaticRouting(routers.Get(0)->GetObject<Ipv4> ());
-  router0_route->AddHostRouteTo(Ipv4Address("10.0.2.2"), Ipv4Address("10.0.1.2"), 1);
-  Ptr<Ipv4StaticRouting> router2_route = ipv4RoutingHelper.GetStaticRouting(routers.Get(2)->GetObject<Ipv4> ());
-  router2_route->AddHostRouteTo(Ipv4Address("10.0.1.1"), Ipv4Address("10.0.2.1"), 1);
- */
+
   uint16_t port = 9;
   UdpEchoServerHelper server (port);
   ApplicationContainer apps = server.Install (routers.Get (2));
