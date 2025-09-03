@@ -17,7 +17,9 @@ $ NS_LOG="*=prefix_time|prefix_node|prefix_level:Ipv4L3Protocol=level_logic|pref
 ```
 
 Log : bgplite.log
+
 Console excerpt : bgplite-screenshot.png
+
 XML : bgp-lite-results.xml
 
 
@@ -30,7 +32,9 @@ $ NS_LOG="*=prefix_time|prefix_node|prefix_level:Ipv4L3Protocol=level_logic|pref
 ```
 
 Log : bgp_partB.log
+
 Console excerpt : bgp_partB-screenshot.png
+
 XML : bgp-partB-results.xml
 
 ## Run BGP Part C
@@ -42,5 +46,7 @@ $ NS_LOG="*=prefix_time|prefix_node|prefix_level:Ipv4L3Protocol=level_logic|pref
 ```
 
 Log : bgp_partC.log
+
 Console excerpt : bgp_partC-screenshot.png
+
 XML : bgp-partC-results.xml
