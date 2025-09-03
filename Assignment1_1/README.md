@@ -1,8 +1,13 @@
 # COL724-Assignment 1-1
 
-Place source files in ```<NS3-DIR>/scratch```
+
+## Part 0
+Report : Assignment1_1 Report 2024CSZ8495.pdf
+
 
 ## Build All
+Place source files in ```<NS3-DIR>/scratch```
+
 ```
 $ cd <NS3-DIR>
 $ ./ns3 build
