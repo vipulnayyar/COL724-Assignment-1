@@ -11,17 +11,15 @@ using namespace ns3;
 NS_LOG_COMPONENT_DEFINE ("BgpPartDExample");
 
 
-void StopLink(Ptr<Node> router1, int32_t interface_index ){
-  router1->GetObject<Ipv4>()->SetDown(interface_index);
-
-  Ipv4GlobalRoutingHelper::RecomputeRoutingTables ();
+void StopLink(Ptr<Node> router1, int32_t interface_index1, Ptr<Node> router2, int32_t interface_index2 ){
+  router1->GetObject<Ipv4>()->SetDown(interface_index1);
+  router2->GetObject<Ipv4>()->SetDown(interface_index2);
 
 }
 
-void StartLink(Ptr<Node> router1, int32_t interface_index ){
-  router1->GetObject<Ipv4>()->SetUp(interface_index);
-
-  Ipv4GlobalRoutingHelper::RecomputeRoutingTables ();
+void StartLink(Ptr<Node> router1, int32_t interface_index1, Ptr<Node> router2, int32_t interface_index2 ){
+  router1->GetObject<Ipv4>()->SetUp(interface_index1);
+  router2->GetObject<Ipv4>()->SetDown(interface_index2);
 
 }
 
@@ -36,6 +34,8 @@ int main (int argc, char *argv[])
   LogComponentEnable ("UdpEchoServerApplication", LOG_LEVEL_INFO);
 
   NS_LOG_INFO ("Starting BGP-part-D style simulation with 4 routers...");
+
+  Config::SetDefault("ns3::Ipv4GlobalRouting::RespondToInterfaceEvents", BooleanValue(true));
 
   NodeContainer routers;
   routers.Create (3);
@@ -81,13 +81,16 @@ int main (int argc, char *argv[])
   apps.Start (Seconds (2.0));
   apps.Stop (Seconds (10.0));
 
-  Ptr<Ipv4> ipv4B = routers.Get(0)->GetObject<Ipv4>();
-  int32_t ifIndexB = ipv4B->GetInterfaceForDevice(d13.Get(0));
+  Ptr<Ipv4> router0 = routers.Get(0)->GetObject<Ipv4>();
+  int32_t router0_interface1 = router0->GetInterfaceForDevice(d13.Get(0));
+
+  Ptr<Ipv4> router2 = routers.Get(2)->GetObject<Ipv4>();
+  int32_t router2_interface1 = router2->GetInterfaceForDevice(d13.Get(1));
 
 
-  Simulator::Schedule(Seconds(5.0), &StopLink, routers.Get (0), ifIndexB );
+  Simulator::Schedule(Seconds(5.0), &StopLink, routers.Get(0), router0_interface1, routers.Get(2), router2_interface1);
 
-  Simulator::Schedule(Seconds(7.0), &StartLink, routers.Get (0), ifIndexB );
+  Simulator::Schedule(Seconds(7.0), &StartLink, routers.Get(0), router0_interface1, routers.Get(2), router2_interface1);
 
 
   FlowMonitorHelper flowmon;
