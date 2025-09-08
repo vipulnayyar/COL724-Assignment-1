@@ -11,17 +11,15 @@ using namespace ns3;
 NS_LOG_COMPONENT_DEFINE ("BgpPartEExample");
 
 
-void StopLink(Ptr<Node> router1, int32_t interface_index ){
-  router1->GetObject<Ipv4>()->SetDown(interface_index);
-
-  Ipv4GlobalRoutingHelper::RecomputeRoutingTables ();
+void StopLink(Ptr<Node> router1, int32_t interface_index1, Ptr<Node> router2, int32_t interface_index2 ){
+  router1->GetObject<Ipv4>()->SetDown(interface_index1);
+  router2->GetObject<Ipv4>()->SetDown(interface_index2);
 
 }
 
-void StartLink(Ptr<Node> router1, int32_t interface_index ){
-  router1->GetObject<Ipv4>()->SetUp(interface_index);
-
-  Ipv4GlobalRoutingHelper::RecomputeRoutingTables ();
+void StartLink(Ptr<Node> router1, int32_t interface_index1, Ptr<Node> router2, int32_t interface_index2 ){
+  router1->GetObject<Ipv4>()->SetUp(interface_index1);
+  router2->GetObject<Ipv4>()->SetUp(interface_index2);
 
 }
 
@@ -36,6 +34,9 @@ int main (int argc, char *argv[])
   LogComponentEnable ("UdpEchoServerApplication", LOG_LEVEL_INFO);
 
   NS_LOG_INFO ("Starting BGP-part-D style simulation with 4 routers...");
+
+  Config::SetDefault("ns3::Ipv4GlobalRouting::RespondToInterfaceEvents", BooleanValue(true));
+
 
   NodeContainer routers;
   routers.Create (4);
@@ -52,7 +53,7 @@ int main (int argc, char *argv[])
   NetDeviceContainer d23 = p2p.Install (routers.Get (1), routers.Get (2));
 
   NetDeviceContainer d14 = p2p.Install (routers.Get (0), routers.Get (3));
-  NetDeviceContainer d43 = p2p.Install (routers.Get (3), routers.Get (2));
+  NetDeviceContainer d34 = p2p.Install (routers.Get (3), routers.Get (2));
 
 
   Ipv4AddressHelper ipv4;
@@ -66,7 +67,7 @@ int main (int argc, char *argv[])
   Ipv4InterfaceContainer i14 = ipv4.Assign (d14);
 
   ipv4.SetBase ("10.0.4.0", "255.255.255.0");
-  Ipv4InterfaceContainer i43 = ipv4.Assign (d43);
+  Ipv4InterfaceContainer i34 = ipv4.Assign (d34);
 
   Ipv4GlobalRoutingHelper::PopulateRoutingTables ();
 
@@ -77,7 +78,7 @@ int main (int argc, char *argv[])
   apps.Start (Seconds (1.0));
   apps.Stop (Seconds (10.0));
 
-  UdpEchoClientHelper client (i23.GetAddress (1), port);
+  UdpEchoClientHelper client (i34.GetAddress (1), port);
   client.SetAttribute ("MaxPackets", UintegerValue (10));
   client.SetAttribute ("Interval", TimeValue (Seconds (1.0)));
   client.SetAttribute ("PacketSize", UintegerValue (1024));
@@ -86,14 +87,16 @@ int main (int argc, char *argv[])
   apps.Start (Seconds (2.0));
   apps.Stop (Seconds (10.0));
 
-  Ptr<Ipv4> ipv4B = routers.Get(1)->GetObject<Ipv4>();
-  int32_t ifIndexB = ipv4B->GetInterfaceForDevice(d23.Get(0));
+  Ptr<Ipv4> router1 = routers.Get(1)->GetObject<Ipv4>();
+  int32_t router1_interface1 = router1->GetInterfaceForDevice(d23.Get(0));
+
+  Ptr<Ipv4> router2 = routers.Get(2)->GetObject<Ipv4>();
+  int32_t router2_interface1 = router2->GetInterfaceForDevice(d23.Get(1));
 
 
-  Simulator::Schedule(Seconds(5.0), &StopLink, routers.Get (1), ifIndexB );
+  Simulator::Schedule(Seconds(5.0), &StopLink, routers.Get(1), router1_interface1, routers.Get(2), router2_interface1);
 
-  Simulator::Schedule(Seconds(7.0), &StartLink, routers.Get (0), ifIndexB );
-
+  Simulator::Schedule(Seconds(7.0), &StartLink, routers.Get(1), router1_interface1, routers.Get(2), router2_interface1);
 
   FlowMonitorHelper flowmon;
   Ptr<FlowMonitor> monitor = flowmon.InstallAll ();

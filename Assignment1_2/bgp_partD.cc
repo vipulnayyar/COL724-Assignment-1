@@ -19,7 +19,7 @@ void StopLink(Ptr<Node> router1, int32_t interface_index1, Ptr<Node> router2, in
 
 void StartLink(Ptr<Node> router1, int32_t interface_index1, Ptr<Node> router2, int32_t interface_index2 ){
   router1->GetObject<Ipv4>()->SetUp(interface_index1);
-  router2->GetObject<Ipv4>()->SetDown(interface_index2);
+  router2->GetObject<Ipv4>()->SetUp(interface_index2);
 
 }
 
