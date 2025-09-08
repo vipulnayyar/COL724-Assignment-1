@@ -1,0 +1,52 @@
+Node: 0, Time: +5s, Local time: +5s, Ipv4ListRouting table
+  Priority: 0 Protocol: ns3::aodv::RoutingProtocol
+Node: 0; Time: +5s, Local time: +5s, AODV Routing table
+
+AODV Routing table
+Destination     Gateway         Interface       Flag            Expire          Hops
+10.0.1.2        10.0.1.2        10.0.1.1        UP              +2s             1
+10.0.1.255      10.0.1.255      10.0.1.1        UP              +9.2e+09s       1
+10.0.2.2        10.0.1.2        10.0.1.1        UP              +2s             2
+10.0.3.2        10.0.3.2        10.0.3.1        UP              +1s             1
+10.0.3.255      10.0.3.255      10.0.3.1        UP              +9.2e+09s       1
+127.0.0.1       127.0.0.1       127.0.0.1       UP              +9.2e+09s       1
+
+
+Node: 1, Time: +5s, Local time: +5s, Ipv4ListRouting table
+  Priority: 0 Protocol: ns3::aodv::RoutingProtocol
+Node: 1; Time: +5s, Local time: +5s, AODV Routing table
+
+AODV Routing table
+Destination     Gateway         Interface       Flag            Expire          Hops
+10.0.1.1        10.0.1.1        10.0.1.2        UP              +2s             1
+10.0.1.255      10.0.1.255      10.0.1.2        UP              +9.2e+09s       1
+127.0.0.1       127.0.0.1       127.0.0.1       UP              +9.2e+09s       1
+
+
+Node: 2, Time: +5s, Local time: +5s, Ipv4ListRouting table
+  Priority: 0 Protocol: ns3::aodv::RoutingProtocol
+Node: 2; Time: +5s, Local time: +5s, AODV Routing table
+
+AODV Routing table
+Destination     Gateway         Interface       Flag            Expire          Hops
+10.0.1.1        10.0.2.1        10.0.2.2        UP              +2s             2
+10.0.2.1        10.0.2.1        10.0.2.2        UP              +2s             1
+10.0.2.255      10.0.2.255      10.0.2.2        UP              +9.2e+09s       1
+10.0.4.1        10.0.4.1        10.0.4.2        UP              +1s             1
+10.0.4.255      10.0.4.255      10.0.4.2        UP              +9.2e+09s       1
+127.0.0.1       127.0.0.1       127.0.0.1       UP              +9.2e+09s       1
+
+
+Node: 3, Time: +5s, Local time: +5s, Ipv4ListRouting table
+  Priority: 0 Protocol: ns3::aodv::RoutingProtocol
+Node: 3; Time: +5s, Local time: +5s, AODV Routing table
+
+AODV Routing table
+Destination     Gateway         Interface       Flag            Expire          Hops
+10.0.3.1        10.0.3.1        10.0.3.2        UP              +1s             1
+10.0.3.255      10.0.3.255      10.0.3.2        UP              +9.2e+09s       1
+10.0.4.2        10.0.4.2        10.0.4.1        UP              +1s             1
+10.0.4.255      10.0.4.255      10.0.4.1        UP              +9.2e+09s       1
+127.0.0.1       127.0.0.1       127.0.0.1       UP              +9.2e+09s       1
+
+

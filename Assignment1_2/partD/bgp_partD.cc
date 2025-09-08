@@ -5,22 +5,29 @@
 #include "ns3/applications-module.h"
 #include "ns3/flow-monitor-module.h"
 //#include "ns3/ipv4-static-routing-helper.h"
+#include "ns3/aodv-helper.h"
 
 using namespace ns3;
 
 NS_LOG_COMPONENT_DEFINE ("BgpPartDExample");
 
 
-void StopLink(Ptr<Node> router1, int32_t interface_index1, Ptr<Node> router2, int32_t interface_index2 ){
+void StopLinkInterface(Ptr<Node> router1, int32_t interface_index1){
+  
   router1->GetObject<Ipv4>()->SetDown(interface_index1);
-  router2->GetObject<Ipv4>()->SetDown(interface_index2);
 
 }
 
-void StartLink(Ptr<Node> router1, int32_t interface_index1, Ptr<Node> router2, int32_t interface_index2 ){
-  router1->GetObject<Ipv4>()->SetUp(interface_index1);
-  router2->GetObject<Ipv4>()->SetUp(interface_index2);
+void StartLinkInterface(Ptr<Node> router1, int32_t interface_index1){
 
+  router1->GetObject<Ipv4>()->SetUp(interface_index1);
+
+}
+
+void SaveSnapshot(Ptr<FlowMonitor> monitor, std::string filename){
+  monitor->CheckForLostPackets();
+  monitor->SerializeToXmlFile(filename, true, true);
+  monitor->ResetAllStats();
 }
 
 int main (int argc, char *argv[])
@@ -40,7 +47,13 @@ int main (int argc, char *argv[])
   NodeContainer routers;
   routers.Create (3);
 
+  AodvHelper aodv;
+    
+  Ipv4ListRoutingHelper list; 
+  list.Add (aodv, 0);
+
   InternetStackHelper internet;
+  internet.SetRoutingHelper(list);
   internet.Install (routers);
 
   PointToPointHelper p2p;
@@ -82,24 +95,36 @@ int main (int argc, char *argv[])
   apps.Stop (Seconds (10.0));
 
   Ptr<Ipv4> router0 = routers.Get(0)->GetObject<Ipv4>();
-  int32_t router0_interface1 = router0->GetInterfaceForDevice(d13.Get(0));
-
-  Ptr<Ipv4> router2 = routers.Get(2)->GetObject<Ipv4>();
-  int32_t router2_interface1 = router2->GetInterfaceForDevice(d13.Get(1));
+  int32_t router0_interface2 = router0->GetInterfaceForDevice(d13.Get(0));
 
 
-  Simulator::Schedule(Seconds(5.0), &StopLink, routers.Get(0), router0_interface1, routers.Get(2), router2_interface1);
+  Simulator::Schedule(Seconds(5.0), &StopLinkInterface, routers.Get(0), router0_interface2);
 
-  Simulator::Schedule(Seconds(7.0), &StartLink, routers.Get(0), router0_interface1, routers.Get(2), router2_interface1);
-
+  Simulator::Schedule(Seconds(7.0), &StartLinkInterface, routers.Get(0), router0_interface2);
 
   FlowMonitorHelper flowmon;
   Ptr<FlowMonitor> monitor = flowmon.InstallAll ();
 
+  Simulator::Schedule(Seconds(5.0), &SaveSnapshot, monitor, "bgp-partD-before-failure-results.xml");
+
+  Simulator::Schedule(Seconds(7.0), &SaveSnapshot, monitor, "bgp-partD-during-failure-results.xml");
+
+
+  Ptr<OutputStreamWrapper> routing_stream1 = Create<OutputStreamWrapper>("partD-aodv-routing-before-failure-4s.routes", std::ios::out);
+  Ipv4RoutingHelper::PrintRoutingTableAllAt(Seconds(4), routing_stream1);
+
+  Ptr<OutputStreamWrapper> routing_stream2 = Create<OutputStreamWrapper>("partD-aodv-routing-during-failure-6s.routes", std::ios::out);
+  Ipv4RoutingHelper::PrintRoutingTableAllAt(Seconds(6), routing_stream2);
+
+  Ptr<OutputStreamWrapper> routing_stream3 = Create<OutputStreamWrapper>("partD-aodv-routing-after-failure-8s.routes", std::ios::out);
+  Ipv4RoutingHelper::PrintRoutingTableAllAt(Seconds(8), routing_stream3);
+
+  
+
   Simulator::Stop (Seconds (11.0));
   Simulator::Run ();
 
-  monitor->SerializeToXmlFile("bgp-partD-results.xml", true, true);
+  monitor->SerializeToXmlFile("bgp-partD-after-failure-results.xml", true, true);
 
   Simulator::Destroy ();
   return 0;
