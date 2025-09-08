@@ -2,7 +2,7 @@
 
 
 ## Build All
-Place source files in ```<NS3-DIR>/scratch```
+Place source files(`partD/bgp_partD.cc` and `partE/bgp_partE.cc`) in ```<NS3-DIR>/scratch```
 
 ```
 $ cd <NS3-DIR>
