@@ -89,7 +89,7 @@ int main (int argc, char *argv[])
   NetDeviceContainer d23 = p2p.Install (routers.Get (1), routers.Get (2));
 
   NetDeviceContainer d14 = p2p.Install (routers.Get (0), routers.Get (3));
-  NetDeviceContainer d34 = p2p.Install (routers.Get (3), routers.Get (2));
+  NetDeviceContainer d34 = p2p.Install (routers.Get (2), routers.Get (3));
 
 
   Ipv4AddressHelper ipv4;

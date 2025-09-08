@@ -111,10 +111,10 @@
     <Flow flowId="7" sourceAddress="10.0.3.2" destinationAddress="10.0.3.1" protocol="17" sourcePort="654" destinationPort="654">
       <Dscp value="0x0" packets="1" />
     </Flow>
-    <Flow flowId="8" sourceAddress="10.0.4.2" destinationAddress="10.0.3.1" protocol="17" sourcePort="9" destinationPort="49153">
+    <Flow flowId="8" sourceAddress="10.0.4.1" destinationAddress="10.0.3.1" protocol="17" sourcePort="9" destinationPort="49153">
       <Dscp value="0x0" packets="1" />
     </Flow>
-    <Flow flowId="6" sourceAddress="10.0.4.2" destinationAddress="10.0.4.1" protocol="17" sourcePort="654" destinationPort="654">
+    <Flow flowId="6" sourceAddress="10.0.4.1" destinationAddress="10.0.4.2" protocol="17" sourcePort="654" destinationPort="654">
       <Dscp value="0x0" packets="1" />
     </Flow>
   </Ipv4FlowClassifier>

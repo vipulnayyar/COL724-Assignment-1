@@ -12,16 +12,16 @@ using namespace ns3;
 NS_LOG_COMPONENT_DEFINE ("BgpPartDExample");
 
 
-void StopLinkInterface(Ptr<Node> router1, int32_t interface_index1){
+void StopLinkInterface(Ptr<Node> router1, int32_t interface_index1, Ptr<Node> router2, int32_t interface_index2){
   
   router1->GetObject<Ipv4>()->SetDown(interface_index1);
+  router2->GetObject<Ipv4>()->SetDown(interface_index2);
 
 }
 
-void StartLinkInterface(Ptr<Node> router1, int32_t interface_index1){
-
+void StartLinkInterface(Ptr<Node> router1, int32_t interface_index1, Ptr<Node> router2, int32_t interface_index2){
   router1->GetObject<Ipv4>()->SetUp(interface_index1);
-
+  router2->GetObject<Ipv4>()->SetUp(interface_index2);
 }
 
 void SaveSnapshot(Ptr<FlowMonitor> monitor, std::string filename){
@@ -40,7 +40,7 @@ int main (int argc, char *argv[])
   LogComponentEnable ("UdpEchoClientApplication", LOG_LEVEL_INFO);
   LogComponentEnable ("UdpEchoServerApplication", LOG_LEVEL_INFO);
 
-  NS_LOG_INFO ("Starting BGP-part-D style simulation with 4 routers...");
+  NS_LOG_INFO ("Starting BGP-part-D style simulation with 3 routers...");
 
   Config::SetDefault("ns3::Ipv4GlobalRouting::RespondToInterfaceEvents", BooleanValue(true));
 
@@ -97,10 +97,13 @@ int main (int argc, char *argv[])
   Ptr<Ipv4> router0 = routers.Get(0)->GetObject<Ipv4>();
   int32_t router0_interface2 = router0->GetInterfaceForDevice(d13.Get(0));
 
+  Ptr<Ipv4> router2 = routers.Get(2)->GetObject<Ipv4>();
+  int32_t router2_interface2 = router2->GetInterfaceForDevice(d13.Get(1));
 
-  Simulator::Schedule(Seconds(5.0), &StopLinkInterface, routers.Get(0), router0_interface2);
 
-  Simulator::Schedule(Seconds(7.0), &StartLinkInterface, routers.Get(0), router0_interface2);
+  Simulator::Schedule(Seconds(5.0), &StopLinkInterface, routers.Get(0), router0_interface2, routers.Get(2), router2_interface2 );
+
+  Simulator::Schedule(Seconds(7.0), &StartLinkInterface, routers.Get(0), router0_interface2, routers.Get(2), router2_interface2 );
 
   FlowMonitorHelper flowmon;
   Ptr<FlowMonitor> monitor = flowmon.InstallAll ();
